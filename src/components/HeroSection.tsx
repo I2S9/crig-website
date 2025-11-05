@@ -4,15 +4,15 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center justify-start min-h-[calc(100vh-140px)] px-4 sm:px-6 lg:px-8 pt-2 sm:pt-4 lg:pt-6 pb-4 sm:pb-6 lg:pb-8">
+    <section className="relative flex flex-col items-center justify-start min-h-[calc(100vh-140px)] px-4 sm:px-6 lg:px-8 pt-1 sm:pt-2 lg:pt-3 pb-4 sm:pb-6 lg:pb-8">
       {/* Logo en arrière-plan transparent */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.08] sm:opacity-[0.1] translate-y-8 sm:translate-y-12">
+      <div className="absolute inset-0 flex items-start justify-center pointer-events-none opacity-[0.08] sm:opacity-[0.1] pt-8 sm:pt-12 lg:pt-16">
         <Image
           src="/logos/logo-crig.png"
           alt="CRIG Logo Background"
-          width={700}
-          height={700}
-          className="w-[350px] h-[350px] sm:w-[425px] sm:h-[425px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] xl:w-[675px] xl:h-[675px] object-contain"
+          width={900}
+          height={900}
+          className="w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] md:w-[600px] md:h-[600px] lg:w-[750px] lg:h-[750px] xl:w-[850px] xl:h-[850px] object-contain"
         />
       </div>
 
@@ -48,7 +48,7 @@ export default function HeroSection() {
         </a>
 
         {/* Rectangle avec vidéo */}
-        <div className="w-full max-w-4xl mx-auto">
+        <div className="w-full max-w-4xl mx-auto mb-32 sm:mb-40 lg:mb-48 xl:mb-56">
           <div className="bg-white border-4 border-marine-blue rounded-xl sm:rounded-2xl overflow-hidden aspect-video shadow-lg">
             <video
               autoPlay
@@ -60,6 +60,49 @@ export default function HeroSection() {
               <source src="/videos/video-accueil.mp4" type="video/mp4" />
               Votre navigateur ne supporte pas la lecture de vidéos.
             </video>
+          </div>
+        </div>
+
+        {/* Section "Créé par les étudiants" */}
+        <div className="w-full max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-16 sm:gap-24 lg:gap-36 xl:gap-40">
+            {/* Forme biscuit paquerette image 1 - fete-science */}
+            <div 
+              className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 overflow-hidden shadow-lg flex-shrink-0"
+              style={{ borderRadius: '38% 62% 63% 37% / 60% 45% 55% 40%' }}
+            >
+              <Image
+                src="/images/fete-science.jpg"
+                alt="Fête de la Science"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* Texte central sur 3 lignes */}
+            <div className="text-center">
+              <h2 className="leading-relaxed">
+                <span className="text-gray-800 block font-extrabold uppercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl whitespace-nowrap mb-1 sm:mb-2">CRÉÉ PAR</span>
+                <span className="text-sky-blue font-[var(--font-cedarville-cursive)] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal block mb-1 sm:mb-2">les étudiants de</span>
+                <span className="text-gray-800 block font-extrabold uppercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl whitespace-nowrap">SUP GALILÉE</span>
+              </h2>
+            </div>
+
+            {/* Forme organique avec lobes image 2 - cdf */}
+            <div 
+              className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 overflow-hidden shadow-lg flex-shrink-0"
+              style={{ 
+                borderRadius: '50% 40% 45% 55% / 45% 55% 50% 45%',
+                clipPath: 'circle(45% at 30% 30%) circle(45% at 70% 30%) circle(45% at 70% 70%) circle(45% at 30% 70%)'
+              }}
+            >
+              <Image
+                src="/images/cdf.jpg"
+                alt="CDF"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
