@@ -10,7 +10,7 @@ interface Experience {
   category: Category;
   title: string;
   description: string;
-  status: "GRATUIT" | "DISPONIBLE" | "À VENIR";
+  status: "À VENIR" | "DISPONIBLE" | "PASSÉ";
   image: string;
 }
 
@@ -20,7 +20,7 @@ const experiences: Experience[] = [
     category: "Formations",
     title: "Ateliers Techniques",
     description: "Apprends à programmer des cartes Arduino, modéliser en 3D ou concevoir des circuits. Des séances animées par des élèves et professeurs passionnés.",
-    status: "GRATUIT",
+    status: "DISPONIBLE",
     image: "/images/projet.jpg",
   },
   {
@@ -28,7 +28,7 @@ const experiences: Experience[] = [
     category: "Événements",
     title: "Journées Portes Ouvertes",
     description: "Participe à nos démonstrations lors des JPO et salons des écoles pour présenter nos robots et inspirer les futurs étudiants.",
-    status: "DISPONIBLE",
+    status: "PASSÉ",
     image: "/images/fete-science.jpg",
   },
   {
@@ -44,7 +44,7 @@ const experiences: Experience[] = [
     category: "Projets",
     title: "Projets Étudiants",
     description: "Monte ton propre projet robotique : bras articulé, rover, ou robot autonome. Tu seras accompagné de membres expérimentés.",
-    status: "GRATUIT",
+    status: "DISPONIBLE",
     image: "/images/cdf.jpg",
   },
   {
@@ -60,7 +60,7 @@ const experiences: Experience[] = [
     category: "Formations",
     title: "Initiation à la Robotique",
     description: "Formation d'introduction à la programmation, l'électronique et la mécanique. Parfaite pour débuter sans prérequis.",
-    status: "GRATUIT",
+    status: "PASSÉ",
     image: "/images/projet.jpg",
   },
 ];
@@ -77,11 +77,11 @@ export default function ExperiencesSection() {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case "GRATUIT":
+      case "À VENIR":
         return "bg-sky-blue text-white";
       case "DISPONIBLE":
         return "bg-blue-600 text-white";
-      case "À VENIR":
+      case "PASSÉ":
         return "bg-marine-blue text-white";
       default:
         return "bg-gray-200 text-gray-900";

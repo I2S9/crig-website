@@ -24,10 +24,12 @@ export default function Footer() {
                 className="w-16 h-16 sm:w-20 sm:h-20 mb-4 object-contain"
               />
               <p className="text-white/80 text-xs sm:text-sm leading-relaxed">
-                Club Robotique de l&apos;Institut Galilée.
+                Club Robotique de l&apos;Institut Galilée
                 <br />
                 <br />
-                Un espace de création et d&apos;apprentissage pour les passionnés de robotique.
+                IGLab Institut Galilée
+                <br />
+                99 Av. Jean Baptiste Clément, 93430 Villetaneuse
               </p>
             </div>
 
@@ -191,4 +193,5 @@ export default function Footer() {
     </footer>
   );
 }
+
 
