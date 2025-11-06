@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-white pt-6 sm:pt-8 pb-2 sm:pb-3">
-      <div className="px-4 sm:px-6 lg:px-8">
+      <div className="px-2 sm:px-3">
         {/* Rectangle bleu marine avec bords arrondis */}
         <div className="bg-marine-blue rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
           {/* Contenu principal du footer */}

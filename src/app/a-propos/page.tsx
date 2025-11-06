@@ -18,13 +18,13 @@ export default function APropos() {
             <div className="flex-1 lg:max-w-2xl">
               <div className="prose prose-lg max-w-none">
                 <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mb-6">
-                  Créé en 2001 par un groupe d&apos;étudiants de l&apos;Institut Galilée, le CRIG est une association regroupant des étudiants passionnés. Depuis plus de vingt ans, nous rassemblons les étudiants autour de projets innovants et de formations techniques.
+                  Créé en 2001 par un groupe d&apos;étudiants de l&apos;Institut Galilée, le CRIG est <span className="font-bold text-sky-blue">une association regroupant des étudiants passionnés</span>. Depuis plus de vingt ans, nous rassemblons les étudiants autour de projets innovants et de formations techniques.
                 </p>
                 <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mb-6">
-                  Le CRIG propose des formations en programmation, électronique et mécanique, et permet la réalisation de vos projets personnels. Nous mettons à disposition l&apos;ensemble du matériel nécessaire : cartes Arduino, imprimantes 3D, outils de prototypage.
+                  Le CRIG propose des formations en programmation, électronique et mécanique, et permet <span className="font-bold text-sky-blue">la réalisation de vos projets personnels</span>. Nous mettons à disposition l&apos;ensemble du matériel nécessaire : cartes Arduino, imprimantes 3D, outils de prototypage.
                 </p>
                 <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
-                  Que tu sois débutant ou expérimenté, le CRIG t&apos;offre un espace de création et d&apos;apprentissage pour développer tes compétences et concrétiser tes idées.
+                  Que tu sois débutant ou expérimenté, le CRIG t&apos;offre <span className="font-bold text-sky-blue">un espace de création et d&apos;apprentissage pour développer tes compétences et concrétiser tes idées</span>.
                 </p>
               </div>
             </div>
@@ -91,8 +91,8 @@ export default function APropos() {
               <div className="flex flex-col items-center">
                 <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full border-4 border-marine-blue overflow-hidden mb-3 sm:mb-4">
                   <Image
-                    src="/images/tresoriere.png"
-                    alt="Yasmina Kader"
+                    src="/images/secretaire.png"
+                    alt="Mélissa CHERIFI"
                     fill
                     className="object-cover"
                   />
@@ -101,7 +101,7 @@ export default function APropos() {
                   Trésorière
                 </p>
                 <p className="text-sm sm:text-base font-medium text-gray-900 text-center">
-                  Yasmina <span className="uppercase">KADER</span>
+                  Mélissa <span className="uppercase">CHERIFI</span>
                 </p>
               </div>
 
@@ -109,8 +109,8 @@ export default function APropos() {
               <div className="flex flex-col items-center">
                 <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full border-4 border-marine-blue overflow-hidden mb-3 sm:mb-4">
                   <Image
-                    src="/images/secretaire.png"
-                    alt="Mélissa CHERIFI"
+                    src="/images/tresoriere.png"
+                    alt="Yasmina Kader"
                     fill
                     className="object-cover"
                   />
@@ -119,7 +119,7 @@ export default function APropos() {
                   Secrétaire
                 </p>
                 <p className="text-sm sm:text-base font-medium text-gray-900 text-center">
-                  Mélissa <span className="uppercase">CHERIFI</span>
+                  Yasmina <span className="uppercase">KADER</span>
                 </p>
               </div>
             </div>
@@ -144,7 +144,7 @@ export default function APropos() {
                 </p>
               </div>
 
-              {/* Responsable communication bis */}
+              {/* Responsable communication adjoint */}
               <div className="flex flex-col items-center">
                 <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full border-4 border-marine-blue overflow-hidden mb-3 sm:mb-4">
                   <Image
@@ -155,7 +155,7 @@ export default function APropos() {
                   />
                 </div>
                 <p className="text-sm sm:text-base font-bold text-gray-900 text-center mb-1">
-                  Responsable communication bis
+                  Responsable communication adjoint
                 </p>
                 <p className="text-sm sm:text-base font-medium text-gray-900 text-center">
                   Antonio <span className="uppercase">PAUL-PRAGE</span>
