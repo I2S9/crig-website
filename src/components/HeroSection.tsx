@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center justify-start min-h-[calc(100vh-140px)] px-4 sm:px-6 lg:px-8 pt-1 sm:pt-2 lg:pt-3 pb-4 sm:pb-6 lg:pb-8">
+    <section className="relative flex flex-col items-center justify-start min-h-[calc(100vh-140px)] px-4 sm:px-6 lg:px-8 pt-0 pb-4 sm:pb-6 lg:pb-8">
       {/* Logo en arrière-plan transparent */}
       <div className="absolute inset-0 flex items-start justify-center pointer-events-none opacity-[0.08] sm:opacity-[0.1] pt-8 sm:pt-12 lg:pt-16">
         <Image
