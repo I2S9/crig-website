@@ -81,8 +81,11 @@ export default function PDFSignatureEditor({ pdfUrl }: PDFSignatureEditorProps) 
       const modifiedPdfBytes = await pdfDoc.save();
       setPdfBytes(modifiedPdfBytes);
 
-      // Créer un blob et télécharger (Uint8Array est directement compatible avec BlobPart)
-      const blob = new Blob([modifiedPdfBytes], { type: "application/pdf" });
+      // Créer un nouvel ArrayBuffer explicite pour garantir la compatibilité avec BlobPart
+      const arrayBuffer = new ArrayBuffer(modifiedPdfBytes.length);
+      const uint8Array = new Uint8Array(arrayBuffer);
+      uint8Array.set(modifiedPdfBytes);
+      const blob = new Blob([arrayBuffer], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
