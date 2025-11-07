@@ -168,6 +168,31 @@ export default function APropos() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 mb-8 sm:mb-12 text-center mt-16 sm:mt-20 lg:mt-24">
             Notre matériel
           </h2>
+
+          {/* Description du matériel */}
+          <div className="max-w-4xl mx-auto">
+            <div className="prose prose-lg max-w-none">
+              <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mb-6">
+                Le CRIG dispose d&apos;un équipement complet pour la réalisation de vos projets robotiques. Nous mettons à votre disposition des <span className="font-bold text-sky-blue">machines de fabrication numérique</span> : imprimantes 3D pour la création de pièces sur mesure, et machine à découpe laser pour la précision dans le travail des matériaux.
+              </p>
+              <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mb-6">
+                Pour vos projets, vous avez accès à une large gamme de <span className="font-bold text-sky-blue">matériaux</span> : bois, carton, acier, ainsi qu&apos;aux équipements électroniques essentiels comme les cartes Arduino, les composants électroniques, et les kits Lego pour la construction rapide de prototypes. Tout le matériel nécessaire est disponible au local pour concrétiser vos idées.
+              </p>
+              <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mb-6">
+                Si tu as besoin de créer un projet particulier qui requiert des <span className="font-bold text-sky-blue">matériaux spécifiques</span>, tu peux faire une demande auprès du CRIG qui commandera les composants pour toi gratuitement, sous réserve de validation du projet. Pour cela, il faudra remplir la fiche-projet à compléter.
+              </p>
+              <div className="flex justify-center">
+                <a 
+                  href="/documents/fiche-projet.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center justify-center px-8 sm:px-12 py-3 bg-sky-blue hover:bg-sky-blue/90 text-white rounded-lg font-medium transition-colors text-sm sm:text-base"
+                >
+                  Télécharger la fiche projet
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <Footer />
