@@ -1,14 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Upload } from "lucide-react";
 
 export default function NousRejoindre() {
   const [step1Completed, setStep1Completed] = useState(false);
   const [step2Completed, setStep2Completed] = useState(false);
   const [step3Completed, setStep3Completed] = useState(false);
+  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   return (
     <main className="min-h-screen bg-white">
@@ -89,8 +91,44 @@ export default function NousRejoindre() {
                         Lire et signer la charte du FormaLabs
                       </h2>
                       <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4">
-                        Lisez attentivement la charte du FormaLabs dans la zone à droite. Téléchargez-la, signez-la manuellement (signature manuscrite et &quot;lu et approuvé&quot;), cochez le droit à l&apos;image, puis envoyez-la par email.
+                        Lisez attentivement la charte du FormaLabs dans la zone à droite. Téléchargez-la, complétez-la manuellement (signature manuscrite et &quot;lu et approuvé&quot;), cochez le droit à l&apos;image, puis scannez les pages concernées et déposez le fichier PDF ci-dessous.
                       </p>
+                      
+                      {/* Input file caché */}
+                      <input
+                        type="file"
+                        ref={fileInputRef}
+                        accept=".pdf"
+                        onChange={(e) => {
+                          const file = e.target.files?.[0];
+                          if (file) {
+                            setUploadedFile(file);
+                          }
+                        }}
+                        className="hidden"
+                      />
+                      
+                      {/* Bouton de dépôt */}
+                      <div className="mb-4">
+                        <button
+                          type="button"
+                          onClick={() => fileInputRef.current?.click()}
+                          className="w-full flex items-center justify-center gap-3 px-4 py-3 bg-sky-blue hover:bg-sky-blue/90 text-white rounded-lg font-medium transition-colors text-sm sm:text-base"
+                        >
+                          <Upload className="w-5 h-5" />
+                          <span>Déposer fichier</span>
+                        </button>
+                        
+                        {/* Affichage du fichier uploadé */}
+                        {uploadedFile && (
+                          <div className="bg-green-50 border border-green-200 rounded-lg p-3 text-sm text-green-800 mt-3">
+                            <p className="font-medium">Fichier déposé :</p>
+                            <p className="truncate">{uploadedFile.name}</p>
+                            <p className="text-xs mt-1">{(uploadedFile.size / 1024).toFixed(2)} KB</p>
+                          </div>
+                        )}
+                      </div>
+                      
                       {/* Case à cocher de validation */}
                       <div className="flex items-center gap-3 mt-4">
                         <input
@@ -130,7 +168,7 @@ export default function NousRejoindre() {
                       rel="noopener noreferrer" 
                       className="text-sm text-sky-blue hover:underline"
                     >
-                      Télécharger la charte
+                      Télécharger la charte originale
                     </a>
                   </div>
                 </div>
